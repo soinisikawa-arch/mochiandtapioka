@@ -153,7 +153,7 @@ export default function Home() {
           <p>すべてご注文後に仕上げます。<br />ネギ餅とドリンクのセットは単品合計から <strong>¥100 OFF</strong></p>
         </div>
         <div className="featured-menu" data-reveal>
-          <img src="/flying-pearls-milk-tea.jpg" alt="タピオカパールとミルクが宙を舞うミルクティー" />
+          <img src="/brown-sugar-bubble-tea.jpg" alt="店内で炊いた黒糖タピオカミルク" />
           <div className="featured-menu__overlay"><span>FUKUCHA SIGNATURE</span><h3>黒糖タピオカ<br />ミルク</h3><p>毎日、店内でじっくり炊く黒糖パール。<br />もちもちの食べごろを、一杯ずつ。</p><strong>¥650</strong></div>
         </div>
         <div className="menu-columns">
