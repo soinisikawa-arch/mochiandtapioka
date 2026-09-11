@@ -12,18 +12,6 @@ import {
   Star,
 } from 'lucide-react';
 
-const scallionMenu = [
-  { name: '福茶クラシック', price: '¥580', note: '香ばしい層と青ねぎの甘み。まずは食べてほしい一枚。', badge: '人気 No.1' },
-  { name: 'とろける蛋起司', price: '¥760', note: 'ふわふわ卵と濃厚チーズを包んだ、台湾屋台の定番。', badge: 'おすすめ' },
-  { name: '台湾スパイスチキン', price: '¥880', note: '五香粉香るチキンと野菜。食べ応えのあるごちそう餅。', badge: '数量限定' },
-];
-
-const drinkMenu = [
-  { name: '黒糖タピオカミルク', price: '¥650', note: '店内炊き黒糖パールと、まろやかな北海道ミルク。', badge: '人気 No.1' },
-  { name: '鉄観音ミルクティー', price: '¥620', note: '焙煎香の深い台湾茶。甘さの奥に香りが残ります。', badge: '茶葉香る' },
-  { name: '茉莉花フルーツティー', price: '¥600', note: 'ジャスミン茶に季節の果実。すっきり爽やかな一杯。', badge: 'さっぱり' },
-];
-
 function BrandMark({ light = false }: { light?: boolean }) {
   return (
     <a className={`brand ${light ? 'brand--light' : ''}`} href="#top" aria-label="福茶葱餅 トップへ">
@@ -145,9 +133,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero__visual" aria-label="焼きたてネギ餅と黒糖タピオカミルク">
+        <div className="hero__visual" aria-label="焼きたてネギ餅とタピオカミルクティー">
           <figure className="hero__pancake image-wrap"><img src="/scallion-pancake.jpg" alt="香ばしく焼けたネギ餅" /></figure>
-          <figure className="hero__tea image-wrap"><img src="/brown-sugar-bubble-tea.jpg" alt="黒糖がとろけるタピオカミルク" /></figure>
+          <figure className="hero__tea image-wrap"><img src="/brown-sugar-bubble-tea.jpg" alt="もちもちのタピオカミルクティー" /></figure>
           <div className="hero__stamp" aria-hidden="true"><span>毎日手づくり</span><strong>現做</strong><span>焼きたて</span></div>
           <p className="hero__vertical" aria-hidden="true">台灣小吃・幸福時間</p>
         </div>
@@ -174,7 +162,7 @@ export default function Home() {
           <div className="scroll-cinema__veil" aria-hidden="true" />
           <div className="scroll-cinema__intro">
             <p>SCROLL TO POUR</p>
-            <h2 id="scroll-cinema-title">黒糖が、<br /><em>踊りだす。</em></h2>
+            <h2 id="scroll-cinema-title">タピオカが、<br /><em>踊りだす。</em></h2>
             <span>ゆっくりスクロールして、できあがる瞬間を。</span>
           </div>
           <div className="scroll-cinema__outro">
@@ -192,15 +180,16 @@ export default function Home() {
         <div className="about__grid">
           <div className="about__title" data-reveal>
             <p className="kicker">私たちについて</p>
-            <h2>台湾の街角で出会った<br /><em>「また食べたい」</em>を、<br />毎日のそばに。</h2>
+            <h2>本格的な味と雰囲気で、<br /><em>非日常を届ける。</em></h2>
           </div>
           <div className="about__body" data-reveal>
-            <p className="lead-copy">福茶葱餅は、台湾の朝市で頬ばった一枚のネギ餅と、友人と笑いながら飲んだ一杯のタピオカから始まりました。</p>
-            <p>特別な日のごちそうではなく、ふと立ち寄れて、心が少しほどける味。粉から仕込む生地、たっぷりの青ねぎ、毎日少量ずつ炊くタピオカ。目の前で仕上がる音や香りまで、台湾のおいしい時間として届けます。</p>
+            <p className="lead-copy">本格的な味と雰囲気を、あなたに。</p>
+            <p>一口食べた瞬間に広がる、本格的な味わい。そして、台湾の街角や夜市を思わせる装飾と活気ある雰囲気の中で、料理を味わうひとときをお楽しみください。</p>
+            <p>私たちは、料理だけでなく、お店に足を運んだ瞬間から楽しんでいただける「味」と「雰囲気」の両方を大切にしています。素材や調理にこだわり、一つひとつ丁寧に仕上げた料理を、心地よい空間とともにお届けします。</p>
             <dl className="values">
-              <div><dt>01</dt><dd><strong>つくりたて</strong><span>焼く、炊く、淹れる。できたての瞬間を大切に。</span></dd></div>
-              <div><dt>02</dt><dd><strong>台湾らしく</strong><span>香りと食感は本場にまっすぐ、食べ方は自由に。</span></dd></div>
-              <div><dt>03</dt><dd><strong>ひらかれた店</strong><span>初めての方も、一人でも、気軽に楽しめる場所に。</span></dd></div>
+              <div><dt>01</dt><dd><strong>素材へのこだわりが生む味</strong><span>タピオカとネギ餅に合う新鮮な素材を、できる限りゆかりのある土地から仕入れています。</span></dd></div>
+              <div><dt>02</dt><dd><strong>専門家がつなぐ本格の味</strong><span>各ジャンルの専門家が知恵を重ね、台湾の街角を思わせる味と雰囲気を一つの店で届けます。</span></dd></div>
+              <div><dt>03</dt><dd><strong>また訪れたくなるひととき</strong><span>出来たてを味わう楽しさと心地よい空間を大切にし、日常の中で本格的な味に出会える店を目指しています。</span></dd></div>
             </dl>
           </div>
         </div>
@@ -217,11 +206,11 @@ export default function Home() {
           </div>
         </article>
         <article className="product-panel product-panel--tea">
-          <div className="product-panel__image" data-reveal><img src="/brown-sugar-bubble-tea.jpg" alt="氷の入った黒糖タピオカミルク" /><span className="photo-label">珍珠奶茶 ・ ZHEN ZHU NAI CHA</span></div>
+          <div className="product-panel__image" data-reveal><img src="/brown-sugar-bubble-tea.jpg" alt="氷の入ったタピオカミルクティー" /><span className="photo-label">珍珠奶茶 ・ ZHEN ZHU NAI CHA</span></div>
           <div className="product-panel__copy" data-reveal>
             <p className="kicker">タピオカとは？</p><h2>お茶を味わい、<br />パールを噛む。</h2>
-            <p>キャッサバのでんぷんから生まれる、つるんと弾む黒いパール。コクのある黒糖で丁寧に炊き、香り高い台湾茶やミルクと合わせます。飲むだけではない、楽しい食感のデザートドリンクです。</p>
-            <div className="taste-notes"><span>もちもち</span><span>黒糖のコク</span><span>台湾茶の香り</span></div>
+            <p>キャッサバのでんぷんから生まれる、つるんと弾む黒いパール。丁寧に仕込んだタピオカを、香り高い台湾茶やミルクと合わせます。飲むだけではない、楽しい食感のデザートドリンクです。</p>
+            <div className="taste-notes"><span>もちもち</span><span>コク深い</span><span>台湾茶の香り</span></div>
           </div>
         </article>
       </section>
@@ -237,32 +226,27 @@ export default function Home() {
 
       <section className="menu-section section-pad" id="menu">
         <div className="menu-heading" data-reveal>
-          <div><p className="section-number">04 — MENU</p><p className="kicker">今日の気分で選ぶ</p><h2>パリッと一枚。<br />もちっと一杯。</h2></div>
-          <p>すべてご注文後に仕上げます。<br />ネギ餅とドリンクのセットは単品合計から <strong>¥100 OFF</strong></p>
+          <div><p className="section-number">04 — MENU</p><p className="kicker">二つの台湾のおいしさ</p><h2>選ぶのは、二つ。<br />味わいは、三つ。</h2></div>
+          <p>メニューはタピオカミルクティーとネギ餅の2品。<br />それぞれ3種類の味をご用意します。</p>
         </div>
-        <div className="featured-menu" data-reveal>
-          <img src="/brown-sugar-bubble-tea.jpg" alt="店内で炊いた黒糖タピオカミルク" />
-          <div className="featured-menu__overlay"><span>FUKUCHA SIGNATURE</span><h3>黒糖タピオカ<br />ミルク</h3><p>毎日、店内でじっくり炊く黒糖パール。<br />もちもちの食べごろを、一杯ずつ。</p><strong>¥650</strong></div>
+        <div className="menu-product-grid">
+          <article className="menu-product-card" data-reveal>
+            <div className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="タピオカミルクティー" /><span>01</span></div>
+            <div className="menu-product-card__body"><p>珍珠奶茶 ・ BUBBLE MILK TEA</p><h3>タピオカ<br />ミルクティー</h3><div><strong>3 FLAVORS</strong><span>3種類の味を準備中</span></div></div>
+          </article>
+          <article className="menu-product-card menu-product-card--green" data-reveal>
+            <div className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>02</span></div>
+            <div className="menu-product-card__body"><p>蔥油餅 ・ SCALLION PANCAKE</p><h3>ネギ餅</h3><div><strong>3 FLAVORS</strong><span>3種類の味付けを準備中</span></div></div>
+          </article>
         </div>
-        <div className="menu-columns">
-          <div className="menu-list" data-reveal><h3><span>蔥油餅</span> NEGI MOCHI</h3>
-            {scallionMenu.map((item) => <article key={item.name}><span className="menu-badge">{item.badge}</span><div><h4>{item.name}</h4><p>{item.note}</p></div><strong>{item.price}</strong></article>)}
-          </div>
-          <div className="menu-list" data-reveal><h3><span>珍珠飲品</span> TAPIOCA DRINK</h3>
-            {drinkMenu.map((item) => <article key={item.name}><span className="menu-badge">{item.badge}</span><div><h4>{item.name}</h4><p>{item.note}</p></div><strong>{item.price}</strong></article>)}
-          </div>
-        </div>
-        <div className="set-menu" data-reveal>
-          <div><span>SET A</span><strong>定番ペア</strong><p>福茶クラシック ＋ お好きなタピオカドリンク</p></div><b>¥1,100</b>
-          <div><span>SET B</span><strong>満福ペア</strong><p>お好きな具入りネギ餅 ＋ お好きなタピオカドリンク</p></div><b>¥1,350〜</b>
-        </div>
-        <p className="menu-note">※価格はすべて税込。写真はイメージです。季節により内容が変わる場合があります。</p>
+        <div className="menu-coming-soon" data-reveal><span>COMING SOON</span><p>3種類の味と価格は、決まり次第こちらでお知らせします。</p></div>
+        <p className="menu-note">※写真はイメージです。メニュー内容は変更になる場合があります。</p>
       </section>
 
       <section className="message section-pad">
         <div className="message__photo" data-reveal><img src="/scallion-pancake.jpg" alt="焼きたてのネギ餅" /><div className="message__monogram" aria-hidden="true">福</div></div>
-        <div className="message__copy" data-reveal><p className="section-number">05 — FROM OUR TEAM</p><p className="kicker">スタッフから</p><blockquote>「焼ける音も、<br />幸せの一部だと思う。」</blockquote>
-          <p>注文をいただいてから鉄板へ。生地がふくらみ、香ばしい匂いが立つ数分も、ぜひ楽しんでください。忙しい日の小休憩にも、大切な人とのおやつにも。台湾の街角のような、明るくておいしい時間を用意してお待ちしています。</p>
+        <div className="message__copy" data-reveal><p className="section-number">05 — FROM OUR TEAM</p><p className="kicker">スタッフから</p><blockquote>「味と雰囲気の両方を、<br />大切に。」</blockquote>
+          <p>本格的な味を、もっと身近に。料理だけでなく、お店に足を運んだ瞬間から楽しめる特別なひとときを、台湾の街角を思わせる空間とともにお届けします。</p>
           <div className="signature"><span>社長</span><strong>矢作 匠</strong><small>TAKUMI YAHAGI</small></div>
         </div>
       </section>
@@ -282,7 +266,7 @@ export default function Home() {
 
       <section className="closing">
         <div className="closing__image" aria-hidden="true"><img src="/brown-sugar-bubble-tea.jpg" alt="" /></div>
-        <div className="closing__copy" data-reveal><Star size={28} fill="currentColor" /><p>パリッ。もちっ。にっこり。</p><h2>ぜひ、本場の味を<br />お楽しみください。</h2><a className="button button--light" href="#menu">今日のメニューへ <ArrowRight size={18} /></a></div>
+        <div className="closing__copy" data-reveal><Star size={28} fill="currentColor" /><p>本格的な味と雰囲気を、あなたに。</p><h2>ぜひ、私たちのお店で<br />特別なひとときを。</h2><a className="button button--light" href="#menu">二つのメニューを見る <ArrowRight size={18} /></a></div>
       </section>
 
       <footer><BrandMark light /><p>台湾の味を、もっと気軽に。</p><div><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#shop">SHOP</a></div><small>© 2026 FUKUCHA TAIWAN SNACKS</small></footer>
