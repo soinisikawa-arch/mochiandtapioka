@@ -227,19 +227,19 @@ export default function Home() {
       <section className="menu-section section-pad" id="menu">
         <div className="menu-heading" data-reveal>
           <div><p className="section-number">04 — MENU</p><p className="kicker">二つの台湾のおいしさ</p><h2>選ぶのは、二つ。<br />味わいは、三つ。</h2></div>
-          <p>メニューはタピオカミルクティーとネギ餅の2品。<br />それぞれ3種類の味をご用意します。</p>
+          <p>メニューはタピオカミルクティーとネギ餅の2品。<br />タピオカミルクティーは1種類、ネギ餅は3種類の味付けをご用意します。</p>
         </div>
         <div className="menu-product-grid">
           <article className="menu-product-card" data-reveal>
             <div className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="タピオカミルクティー" /><span>01</span></div>
-            <div className="menu-product-card__body"><p>珍珠奶茶 ・ BUBBLE MILK TEA</p><h3>タピオカ<br />ミルクティー</h3><div><strong>3 FLAVORS</strong><span>3種類の味を準備中</span></div></div>
+            <div className="menu-product-card__body"><p>珍珠奶茶 ・ BUBBLE MILK TEA</p><h3>タピオカ<br />ミルクティー</h3><div><strong>1 FLAVOR</strong><span>1種類をご用意</span></div></div>
           </article>
           <article className="menu-product-card menu-product-card--green" data-reveal>
             <div className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>02</span></div>
             <div className="menu-product-card__body"><p>蔥油餅 ・ SCALLION PANCAKE</p><h3>ネギ餅</h3><div><strong>3 FLAVORS</strong><span>3種類の味付けを準備中</span></div></div>
           </article>
         </div>
-        <div className="menu-coming-soon" data-reveal><span>COMING SOON</span><p>3種類の味と価格は、決まり次第こちらでお知らせします。</p></div>
+        <div className="menu-coming-soon" data-reveal><span>COMING SOON</span><p>商品の詳細と価格は、決まり次第こちらでお知らせします。</p></div>
         <p className="menu-note">※写真はイメージです。メニュー内容は変更になる場合があります。</p>
       </section>
 
