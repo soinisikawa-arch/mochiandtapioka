@@ -54,6 +54,66 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const section = document.querySelector<HTMLElement>('.scroll-cinema');
+    const video = section?.querySelector<HTMLVideoElement>('video');
+    const intro = section?.querySelector<HTMLElement>('.scroll-cinema__intro');
+    const outro = section?.querySelector<HTMLElement>('.scroll-cinema__outro');
+    const progressBar = section?.querySelector<HTMLElement>('.scroll-cinema__progress-bar');
+    if (!section || !video || !intro || !outro || !progressBar) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0;
+
+    const showStill = () => {
+      if (Number.isFinite(video.duration)) video.currentTime = Math.min(2.7, video.duration * 0.6);
+    };
+
+    const syncToScroll = () => {
+      frame = 0;
+      const rect = section.getBoundingClientRect();
+      const distance = Math.max(1, section.offsetHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / distance));
+      const duration = Number.isFinite(video.duration) ? video.duration : 0;
+
+      if (duration > 0) {
+        const targetTime = progress * Math.max(0, duration - 0.04);
+        if (Math.abs(video.currentTime - targetTime) > 0.025) video.currentTime = targetTime;
+      }
+
+      intro.style.opacity = String(Math.max(0, 1 - progress / 0.24));
+      intro.style.setProperty('--scroll-y', `${-progress * 70}px`);
+      const outroProgress = Math.min(1, Math.max(0, (progress - 0.7) / 0.18));
+      outro.style.opacity = String(outroProgress);
+      outro.style.setProperty('--outro-y', `${(1 - outroProgress) * 42}px`);
+      video.style.transform = `scale(${1.02 + progress * 0.045})`;
+      progressBar.style.transform = `scaleX(${progress})`;
+    };
+
+    const requestSync = () => {
+      if (!frame) frame = window.requestAnimationFrame(syncToScroll);
+    };
+
+    if (reducedMotion.matches) {
+      video.addEventListener('loadedmetadata', showStill);
+      showStill();
+      return () => video.removeEventListener('loadedmetadata', showStill);
+    }
+
+    video.pause();
+    video.addEventListener('loadedmetadata', syncToScroll);
+    window.addEventListener('scroll', requestSync, { passive: true });
+    window.addEventListener('resize', requestSync);
+    syncToScroll();
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      video.removeEventListener('loadedmetadata', syncToScroll);
+      window.removeEventListener('scroll', requestSync);
+      window.removeEventListener('resize', requestSync);
+    };
+  }, []);
+
   return (
     <main id="top">
       <header className="site-header">
@@ -98,6 +158,34 @@ export default function Home() {
         <span>焼きたて葱油餅</span><i>◆</i><span>もちもち珍珠</span><i>◆</i><span>台湾茶葉</span><i>◆</i>
         <span>焼きたて葱油餅</span><i>◆</i><span>もちもち珍珠</span><i>◆</i><span>台湾茶葉</span><i>◆</i>
       </div></div>
+
+      <section className="scroll-cinema" aria-labelledby="scroll-cinema-title">
+        <div className="scroll-cinema__sticky">
+          <video
+            aria-hidden="true"
+            muted
+            playsInline
+            preload="auto"
+            poster="/boba-scroll-poster.jpg"
+            tabIndex={-1}
+          >
+            <source src="/boba-scroll.mp4" type="video/mp4" />
+          </video>
+          <div className="scroll-cinema__veil" aria-hidden="true" />
+          <div className="scroll-cinema__intro">
+            <p>SCROLL TO POUR</p>
+            <h2 id="scroll-cinema-title">黒糖が、<br /><em>踊りだす。</em></h2>
+            <span>ゆっくりスクロールして、できあがる瞬間を。</span>
+          </div>
+          <div className="scroll-cinema__outro">
+            <span>毎日、店内炊き。</span>
+            <h3>一番もちもちの瞬間を、<br />あなたの一杯に。</h3>
+            <a href="#menu">タピオカメニューへ <ArrowRight size={18} /></a>
+          </div>
+          <p className="scroll-cinema__kanji" aria-hidden="true">珍珠奶茶</p>
+          <div className="scroll-cinema__progress" aria-hidden="true"><span className="scroll-cinema__progress-bar" /></div>
+        </div>
+      </section>
 
       <section className="about section-pad" id="about">
         <div className="section-number" data-reveal>01 — ABOUT US</div>

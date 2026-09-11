@@ -150,6 +150,125 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .ticker span { font-family: "Yu Mincho", serif; font-size: 18px; font-weight: 700; letter-spacing: .12em; white-space: nowrap; }
 .ticker i { color: var(--yellow); font-style: normal; }
 
+.scroll-cinema {
+  background: #020302;
+  color: white;
+  height: 320svh;
+  position: relative;
+}
+.scroll-cinema__sticky {
+  height: 100svh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+.scroll-cinema video {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transform: scale(1.02);
+  width: 100%;
+  will-change: transform;
+}
+.scroll-cinema__veil {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.18) 45%, rgba(0,0,0,.06) 66%, rgba(0,0,0,.42) 100%),
+    linear-gradient(0deg, rgba(0,0,0,.45), transparent 35%);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.scroll-cinema__intro,
+.scroll-cinema__outro {
+  position: absolute;
+  will-change: opacity, transform;
+  z-index: 2;
+}
+.scroll-cinema__intro {
+  --scroll-y: 0px;
+  left: clamp(24px, 8vw, 140px);
+  top: 50%;
+  transform: translateY(calc(-50% + var(--scroll-y)));
+}
+.scroll-cinema__intro > p {
+  color: var(--yellow);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .3em;
+  margin: 0 0 24px;
+}
+.scroll-cinema__intro h2 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(54px, 7.2vw, 112px);
+  font-weight: 700;
+  letter-spacing: -.07em;
+  line-height: 1.06;
+  margin: 0 0 30px;
+}
+.scroll-cinema__intro h2 em { color: var(--yellow); font-style: normal; }
+.scroll-cinema__intro > span { color: rgba(255,255,255,.68); font-size: 13px; letter-spacing: .08em; }
+.scroll-cinema__outro {
+  --outro-y: 42px;
+  bottom: clamp(70px, 11vh, 120px);
+  opacity: 0;
+  right: clamp(24px, 8vw, 140px);
+  text-align: right;
+  transform: translateY(var(--outro-y));
+}
+.scroll-cinema__outro > span {
+  color: var(--yellow);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+.scroll-cinema__outro h3 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(27px, 3.1vw, 48px);
+  line-height: 1.45;
+  margin: 14px 0 28px;
+}
+.scroll-cinema__outro a {
+  align-items: center;
+  border-bottom: 1px solid var(--yellow);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 14px;
+  padding-bottom: 6px;
+}
+.scroll-cinema__kanji {
+  font-family: "Yu Mincho", serif;
+  font-size: 14px;
+  letter-spacing: .5em;
+  margin: 0;
+  opacity: .55;
+  position: absolute;
+  right: 28px;
+  top: 30px;
+  writing-mode: vertical-rl;
+  z-index: 2;
+}
+.scroll-cinema__progress {
+  background: rgba(255,255,255,.22);
+  bottom: 28px;
+  height: 2px;
+  left: clamp(24px, 8vw, 140px);
+  position: absolute;
+  right: clamp(24px, 8vw, 140px);
+  z-index: 2;
+}
+.scroll-cinema__progress-bar {
+  background: var(--yellow);
+  display: block;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+  will-change: transform;
+}
+
 .section-pad { padding: clamp(95px, 11vw, 175px) clamp(24px, 8vw, 140px); }
 .section-number { color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .2em; }
 .kicker { color: var(--jade); font-size: 13px; font-weight: 800; letter-spacing: .2em; margin: 0 0 18px; }
@@ -322,6 +441,16 @@ footer > small { color: rgba(255,255,255,.35); font-size: 9px; grid-column: 1 / 
   .hero__stamp strong { font-size: 28px; }
   .hero__vertical { right: 2px; top: 55px; }
   .ticker span { font-size: 15px; }
+  .scroll-cinema { height: 280svh; }
+  .scroll-cinema video { object-position: center; }
+  .scroll-cinema__veil { background: linear-gradient(0deg, rgba(0,0,0,.72), rgba(0,0,0,.06) 70%); }
+  .scroll-cinema__intro { left: 23px; top: 18%; transform: translateY(var(--scroll-y)); }
+  .scroll-cinema__intro h2 { font-size: clamp(51px, 16vw, 72px); }
+  .scroll-cinema__intro > span { display: block; max-width: 260px; }
+  .scroll-cinema__outro { bottom: 70px; left: 23px; right: 23px; text-align: left; }
+  .scroll-cinema__outro h3 { font-size: 25px; }
+  .scroll-cinema__kanji { right: 12px; top: 18px; }
+  .scroll-cinema__progress { bottom: 22px; left: 23px; right: 23px; }
   .section-pad { padding: 90px 23px; }
   .about__grid { margin-top: 55px; }
   .about h2, .product-panel h2, .history h2, .menu-heading h2, .shop h2 { font-size: 37px; }
@@ -366,4 +495,12 @@ footer > small { color: rgba(255,255,255,.35); font-size: 9px; grid-column: 1 / 
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
+  .scroll-cinema { height: 100svh; }
+  .scroll-cinema__sticky { position: relative; }
+  .scroll-cinema__intro { opacity: 1 !important; transform: translateY(-50%) !important; }
+  .scroll-cinema__outro, .scroll-cinema__progress { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 640px) {
+  .scroll-cinema__intro { transform: none !important; }
 }
