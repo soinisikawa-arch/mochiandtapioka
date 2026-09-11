@@ -175,7 +175,7 @@ export default function Home() {
         <div className="message__photo" data-reveal><img src="/scallion-pancake.jpg" alt="焼きたてのネギ餅" /><div className="message__monogram" aria-hidden="true">福</div></div>
         <div className="message__copy" data-reveal><p className="section-number">05 — FROM OUR TEAM</p><p className="kicker">スタッフから</p><blockquote>「焼ける音も、<br />幸せの一部だと思う。」</blockquote>
           <p>注文をいただいてから鉄板へ。生地がふくらみ、香ばしい匂いが立つ数分も、ぜひ楽しんでください。忙しい日の小休憩にも、大切な人とのおやつにも。台湾の街角のような、明るくておいしい時間を用意してお待ちしています。</p>
-          <div className="signature"><span>店長</span><strong>林 美福</strong><small>LIN MEI-FU</small></div>
+          <div className="signature"><span>社長</span><strong>矢作 匠</strong><small>TAKUMI YAHAGI</small></div>
         </div>
       </section>
 
@@ -184,12 +184,11 @@ export default function Home() {
         <div className="shop__card" data-reveal>
           <div className="shop__identity"><BrandMark light /><p>台湾ネギ餅とタピオカ専門店</p></div>
           <dl>
-            <div><dt><MapPin size={17} />住所</dt><dd>東京都渋谷区神宮前 0-0-0<br /><small>○○駅 東口より徒歩3分</small></dd></div>
-            <div><dt><Clock3 size={17} />営業時間</dt><dd>11:00 — 21:00<br /><small>ラストオーダー 20:30</small></dd></div>
-            <div><dt>定休日</dt><dd>毎週火曜日</dd></div><div><dt>OPEN</dt><dd>2026年 秋予定</dd></div>
+            <div><dt><MapPin size={17} />場所</dt><dd>郁文館夢学園</dd></div>
+            <div><dt><Clock3 size={17} />営業時間</dt><dd><strong>1日目</strong>　9:00 — 16:00<br /><strong>2日目</strong>　9:00 — 15:00</dd></div>
           </dl>
-          <div className="shop__links"><a href="https://maps.google.com" target="_blank" rel="noreferrer">Google Map <ArrowRight size={17} /></a><a href="https://instagram.com" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></div>
-          <p className="placeholder-note">※店舗名・住所・営業時間・オープン日は仮情報です。公開前に正式情報へ差し替えてください。</p>
+          <div className="shop__links"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%83%81%E6%96%87%E9%A4%A8%E5%A4%A2%E5%AD%A6%E5%9C%92" target="_blank" rel="noreferrer">Google Map <ArrowRight size={17} /></a><a href="https://instagram.com" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></div>
+          <p className="placeholder-note">※店名とSNSリンクは仮情報です。公開前に正式情報へ差し替えてください。</p>
         </div>
       </section>
 
