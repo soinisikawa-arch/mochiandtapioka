@@ -14,11 +14,11 @@ import {
 
 function BrandMark({ light = false }: { light?: boolean }) {
   return (
-    <a className={`brand ${light ? 'brand--light' : ''}`} href="#top" aria-label="福茶葱餅 トップへ">
-      <span className="brand__seal" aria-hidden="true">福</span>
+    <a className={`brand ${light ? 'brand--light' : ''}`} href="#top" aria-label="もちっとこいよ トップへ">
+      <span className="brand__seal" aria-hidden="true">餅</span>
       <span className="brand__name">
-        <strong>福茶葱餅</strong>
-        <small>FUKUCHA TAIWAN SNACKS</small>
+        <strong>もちっとこいよ</strong>
+        <small>MOCHITTO KOIYO</small>
       </span>
     </a>
   );
@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       <section className="message section-pad">
-        <div className="message__photo" data-reveal><img src="/scallion-pancake.jpg" alt="焼きたてのネギ餅" /><div className="message__monogram" aria-hidden="true">福</div></div>
+        <div className="message__photo" data-reveal><img src="/scallion-pancake.jpg" alt="焼きたてのネギ餅" /><div className="message__monogram" aria-hidden="true">餅</div></div>
         <div className="message__copy" data-reveal><p className="section-number">05 — FROM OUR TEAM</p><p className="kicker">スタッフから</p><blockquote>「味と雰囲気の両方を、<br />大切に。」</blockquote>
           <p>本格的な味を、もっと身近に。料理だけでなく、お店に足を運んだ瞬間から楽しめる特別なひとときを、台湾の街角を思わせる空間とともにお届けします。</p>
           <div className="signature"><span>社長</span><strong>矢作 匠</strong><small>TAKUMI YAHAGI</small></div>
@@ -260,7 +260,7 @@ export default function Home() {
             <div><dt><Clock3 size={17} />営業時間</dt><dd><strong>1日目</strong>　9:00 — 16:00<br /><strong>2日目</strong>　9:00 — 15:00</dd></div>
           </dl>
           <div className="shop__links"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%83%81%E6%96%87%E9%A4%A8%E5%A4%A2%E5%AD%A6%E5%9C%92" target="_blank" rel="noreferrer">Google Map <ArrowRight size={17} /></a><a href="https://instagram.com" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></div>
-          <p className="placeholder-note">※店名とSNSリンクは仮情報です。公開前に正式情報へ差し替えてください。</p>
+          <p className="placeholder-note">※SNSリンクは仮情報です。公開前に正式情報へ差し替えてください。</p>
         </div>
       </section>
 
@@ -269,7 +269,7 @@ export default function Home() {
         <div className="closing__copy" data-reveal><Star size={28} fill="currentColor" /><p>本格的な味と雰囲気を、あなたに。</p><h2>ぜひ、私たちのお店で<br />特別なひとときを。</h2><a className="button button--light" href="#menu">二つのメニューを見る <ArrowRight size={18} /></a></div>
       </section>
 
-      <footer><BrandMark light /><p>台湾の味を、もっと気軽に。</p><div><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#shop">SHOP</a></div><small>© 2026 FUKUCHA TAIWAN SNACKS</small></footer>
+      <footer><BrandMark light /><p>台湾の味を、もっと気軽に。</p><div><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#shop">SHOP</a></div><small>© 2026 MOCHITTO KOIYO</small></footer>
       <a className="floating-menu" href="#menu"><span>MENU</span><ArrowRight size={16} /></a>
     </main>
   );
