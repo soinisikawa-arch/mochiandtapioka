@@ -139,7 +139,7 @@ export default function Home() {
           <div className="hero__stamp" aria-hidden="true"><span>毎日手づくり</span><strong>現做</strong><span>焼きたて</span></div>
           <p className="hero__vertical" aria-hidden="true">台灣小吃・幸福時間</p>
         </div>
-        <a className="scroll-cue" href="#about" aria-label="次のセクションへ"><span>SCROLL</span><ArrowDown size={17} /></a>
+        <a className="scroll-cue" href="#motion" aria-label="タピオカミルクティーのモーションへ"><span>SCROLL</span><ArrowDown size={17} /></a>
       </section>
 
       <div className="ticker" aria-hidden="true"><div>
@@ -147,7 +147,7 @@ export default function Home() {
         <span>焼きたて葱油餅</span><i>◆</i><span>もちもち珍珠</span><i>◆</i><span>台湾茶葉</span><i>◆</i>
       </div></div>
 
-      <section className="scroll-cinema" aria-labelledby="scroll-cinema-title">
+      <section className="scroll-cinema" id="motion" aria-labelledby="scroll-cinema-title">
         <div className="scroll-cinema__sticky">
           <video
             aria-hidden="true"
