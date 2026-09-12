@@ -1,16 +1,15 @@
 .menu-section {
-  position: relative;
+  background: #fffaf0;
   overflow: hidden;
+  position: relative;
 }
 
 .menu-section::before {
+  background: linear-gradient(90deg, rgba(13, 75, 59, .05), transparent 28%, transparent 72%, rgba(221, 61, 36, .04));
   content: '';
-  position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(36, 23, 15, 0.08) 0.7px, transparent 0.7px);
-  background-size: 10px 10px;
-  opacity: 0.22;
+  position: absolute;
 }
 
 .menu-section > * {
@@ -19,187 +18,220 @@
 }
 
 .menu-heading {
-  margin-bottom: 52px;
+  align-items: end;
+  border-bottom: 1px solid rgba(36, 23, 15, .18);
+  margin-bottom: 0;
+  padding-bottom: 44px;
 }
 
+.menu-heading > p {
+  max-width: 360px;
+}
+
+/* 大きな写真カードはやめて、レストランのメニュー表のような一覧に変更 */
 .menu-product-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  gap: clamp(22px, 3vw, 42px);
-  align-items: stretch;
+  gap: 0;
+  grid-template-columns: 1fr;
+  margin-top: 0;
 }
 
-.menu-product-card {
-  display: flex;
-  flex-direction: column;
+.menu-product-card,
+.menu-product-card--green {
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid rgba(36, 23, 15, .18);
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: minmax(210px, .72fr) minmax(0, 1.28fr);
   min-width: 0;
-  box-shadow: 0 24px 60px rgba(36, 23, 15, 0.10);
+  overflow: visible;
+  padding: clamp(34px, 5vw, 62px) 0;
+  box-shadow: none;
 }
 
+/* 写真はメニュー欄から外す */
 .menu-product-card__image {
-  height: clamp(320px, 35vw, 470px);
+  display: none;
 }
 
 .menu-product-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-height: 300px;
-  padding: clamp(30px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: minmax(170px, .72fr) minmax(0, 1.28fr);
+  grid-template-rows: auto auto;
+  min-height: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu-product-card__body > p {
+  align-self: end;
+  color: var(--jade);
+  font-size: 10px;
+  font-weight: 900;
+  grid-column: 1;
+  grid-row: 1;
+  letter-spacing: .18em;
+  margin: 0 0 9px;
 }
 
 .menu-product-card__body h3 {
-  font-size: clamp(40px, 4.4vw, 66px);
+  color: var(--ink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 700;
+  grid-column: 1;
+  grid-row: 2;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+  margin: 0;
 }
 
-/* タピオカ：価格を大きく、ひと目で分かる表示 */
+.menu-product-card__body > div,
+.menu-product-card--green .menu-product-card__body > div {
+  align-items: center;
+  align-self: stretch;
+  border-left: 1px solid rgba(36, 23, 15, .18);
+  border-top: 0;
+  display: flex;
+  gap: 28px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  justify-content: space-between;
+  margin: 0;
+  min-width: 0;
+  padding: 12px 0 12px clamp(28px, 5vw, 72px);
+}
+
+/* 以前の擬似要素で作った価格表示を完全に解除 */
+.menu-product-card--green .menu-product-card__body > div::before,
+.menu-product-card--green .menu-product-card__body > div strong::after,
+.menu-product-card--green .menu-product-card__body > div span::after {
+  content: none !important;
+}
+
+.menu-product-card__body strong,
+.menu-product-card--green .menu-product-card__body strong {
+  border: 0;
+  color: var(--red);
+  display: block;
+  flex: 0 0 auto;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(30px, 3.3vw, 46px);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: 1;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.menu-product-card--green .menu-product-card__body strong {
+  color: var(--green);
+  font-size: clamp(22px, 2.4vw, 34px);
+}
+
+.menu-product-card__body span,
+.menu-product-card--green .menu-product-card__body span {
+  color: rgba(36, 23, 15, .72);
+  display: block;
+  flex: 1;
+  font-size: clamp(13px, 1.15vw, 16px);
+  font-weight: 700;
+  line-height: 2;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: right;
+}
+
+/* タピオカは価格を主役に */
 .menu-product-card:not(.menu-product-card--green) .menu-product-card__body > div {
-  align-items: end;
-  margin-top: auto;
-  padding-top: 24px;
+  justify-content: flex-end;
 }
 
 .menu-product-card:not(.menu-product-card--green) .menu-product-card__body strong {
-  color: var(--yellow);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(44px, 4.6vw, 68px);
-  font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 1;
+  color: var(--red);
+  font-size: clamp(44px, 5vw, 72px);
 }
 
 .menu-product-card:not(.menu-product-card--green) .menu-product-card__body span {
-  color: rgba(255,255,255,.78);
+  flex: 0 0 auto;
   font-size: 12px;
-  padding-bottom: 7px;
 }
 
-/* ネギ餅：3つの味と価格を別々のメニューとして表示 */
-.menu-product-card--green .menu-product-card__body > div {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 0;
-  margin-top: auto;
-  padding-top: 0;
-  border-top: 1px solid rgba(255,255,255,.28);
-}
-
-.menu-product-card--green .menu-product-card__body > div::before,
-.menu-product-card--green .menu-product-card__body > div strong,
-.menu-product-card--green .menu-product-card__body > div span {
-  min-height: 122px;
-  margin: 0;
-  padding: 24px 14px 18px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  white-space: pre-line;
-}
-
-.menu-product-card--green .menu-product-card__body > div::before {
-  content: '醤油\A400円';
-  color: var(--yellow);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.55;
-}
-
-.menu-product-card--green .menu-product-card__body > div strong {
-  border-left: 1px solid rgba(255,255,255,.20);
-  border-right: 1px solid rgba(255,255,255,.20);
-  color: transparent;
-  font-size: 0;
-  letter-spacing: 0;
-}
-
-.menu-product-card--green .menu-product-card__body > div strong::after {
-  content: 'ポン酢\A400円';
-  color: var(--yellow);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.55;
-  white-space: pre-line;
-}
-
-.menu-product-card--green .menu-product-card__body > div span {
-  color: transparent;
-  font-size: 0;
-}
-
-.menu-product-card--green .menu-product-card__body > div span::after {
-  content: 'チーズ\A500円';
-  color: var(--yellow);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.55;
-  white-space: pre-line;
-}
-
-/* 価格の重複表示だった帯は非表示 */
+/* 重複していた下部の価格帯は削除 */
 .menu-coming-soon {
   display: none;
 }
 
 .menu-note {
-  margin-top: 18px;
+  color: rgba(36, 23, 15, .52);
+  font-size: 10px;
+  margin-top: 14px;
+  text-align: right;
 }
 
 @media (max-width: 820px) {
-  .menu-product-grid {
-    grid-template-columns: 1fr;
+  .menu-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 28px;
   }
 
-  .menu-product-card__image {
-    height: min(66vw, 500px);
+  .menu-product-card,
+  .menu-product-card--green {
+    display: block;
+    padding: 34px 0;
   }
 
   .menu-product-card__body {
-    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .menu-product-card__body > p,
+  .menu-product-card__body h3,
+  .menu-product-card__body > div,
+  .menu-product-card--green .menu-product-card__body > div {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .menu-product-card__body > div,
+  .menu-product-card--green .menu-product-card__body > div {
+    border-left: 0;
+    border-top: 1px solid rgba(36, 23, 15, .15);
+    margin-top: 24px;
+    padding: 22px 0 0;
+  }
+
+  .menu-product-card__body span,
+  .menu-product-card--green .menu-product-card__body span {
+    text-align: right;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   .menu-heading {
-    margin-bottom: 38px;
+    padding-bottom: 32px;
   }
 
-  .menu-product-card__image {
-    height: 390px;
+  .menu-product-card__body > div,
+  .menu-product-card--green .menu-product-card__body > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .menu-product-card__body {
-    padding: 32px 24px 34px;
+  .menu-product-card__body span,
+  .menu-product-card--green .menu-product-card__body span {
+    line-height: 1.85;
+    text-align: left;
   }
 
   .menu-product-card:not(.menu-product-card--green) .menu-product-card__body > div {
-    align-items: start;
-  }
-
-  .menu-product-card--green .menu-product-card__body > div {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-product-card--green .menu-product-card__body > div::before,
-  .menu-product-card--green .menu-product-card__body > div strong,
-  .menu-product-card--green .menu-product-card__body > div span {
-    min-height: 82px;
-    padding: 15px 10px;
-  }
-
-  .menu-product-card--green .menu-product-card__body > div strong {
-    border-left: 0;
-    border-right: 0;
-    border-top: 1px solid rgba(255,255,255,.18);
-    border-bottom: 1px solid rgba(255,255,255,.18);
-  }
-
-  .menu-product-card--green .menu-product-card__body > div::before,
-  .menu-product-card--green .menu-product-card__body > div strong::after,
-  .menu-product-card--green .menu-product-card__body > div span::after {
-    font-size: 20px;
+    align-items: flex-start;
   }
 }
