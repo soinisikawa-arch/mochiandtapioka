@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import {
   ArrowDown,
   ArrowRight,
-  Camera,
   Clock3,
   MapPin,
   Menu as MenuIcon,
@@ -195,11 +194,52 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="history section-pad" aria-labelledby="history-title">
+        <div className="history__intro" data-reveal><p className="section-number">02 — ROOTS &amp; CULTURE</p><p className="kicker">おいしさの歴史</p><h2 id="history-title">朝ごはんから、<br />世界のカルチャーへ。</h2></div>
+        <div className="timeline">
+          <article data-reveal><span>毎日の味</span><h3>台湾の暮らしに根づくネギ餅</h3><p>身近な小麦と青ねぎを使ったネギ餅は、台湾で朝食や軽食として親しまれてきました。屋台の鉄板で焼ける音と香りも、ごちそうの一部です。</p></article>
+          <article data-reveal><span>1980s</span><h3>台中から生まれた新しいお茶時間</h3><p>冷たい泡沫紅茶の文化に、甘く煮た粉圓（タピオカパール）が出会い、1980年代の台湾で珍珠奶茶が広まりました。</p></article>
+          <article data-reveal><span>NOW</span><h3>世代も国境も越える台湾小吃</h3><p>片手で楽しめる粉ものとお茶は、台湾の気取らない食文化そのもの。今では世界中で、自由な具材や甘さに進化しています。</p></article>
+        </div>
+      </section>
+
+      <section className="menu-section section-pad" id="menu">
+        <div className="menu-heading" data-reveal>
+          <div><p className="section-number">03 — MENU</p><p className="kicker">二つの台湾のおいしさ</p><h2>ネギ餅、三つの味。<br />タピオカも一緒に。</h2></div>
+          <p>ネギ餅は醤油・ポン酢・チーズの3種類。<br />タピオカは350円でご用意しています。</p>
+        </div>
+        <div className="menu-product-grid">
+          <article className="menu-product-card menu-product-card--green" data-reveal>
+            <figure className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>01 ・ 蔥油餅</span></figure>
+            <div className="menu-product-card__body">
+              <p>SCALLION PANCAKE</p><h3>ネギ餅</h3>
+              <p className="menu-product-card__lead">焼きたての香ばしさと、重なった生地のもちもち食感。</p>
+              <ul className="menu-price-list" aria-label="ネギ餅の味と価格">
+                <li><span>醤油味</span><strong>400<small>円</small></strong></li>
+                <li><span>ポン酢</span><strong>400<small>円</small></strong></li>
+                <li><span>チーズ</span><strong>500<small>円</small></strong></li>
+              </ul>
+            </div>
+          </article>
+          <article className="menu-product-card" data-reveal>
+            <figure className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="黒いタピオカパールが入ったミルクティー" /><span>02 ・ 珍珠</span></figure>
+            <div className="menu-product-card__body">
+              <p>TAPIOCA DRINK</p><h3>タピオカ</h3>
+              <p className="menu-product-card__lead">もちもちのパールを楽しむ、ひんやり台湾ドリンク。</p>
+              <ul className="menu-price-list menu-price-list--single" aria-label="タピオカの価格">
+                <li><span>タピオカ</span><strong>350<small>円</small></strong></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p className="menu-note">※写真はイメージです。メニュー内容は変更になる場合があります。</p>
+      </section>
+
       <section className="product-story" id="story">
         <article className="product-panel product-panel--pancake">
           <div className="product-panel__image" data-reveal><img src="/scallion-pancake.jpg" alt="層になった生地と青ねぎが見えるネギ餅" /><span className="photo-label">蔥油餅 ・ CONG YOU BING</span></div>
           <div className="product-panel__copy" data-reveal>
-            <p className="section-number">02 — OUR SPECIALTY</p><p className="kicker">ネギ餅とは？</p>
+            <p className="section-number">04 — ORIGIN STORIES</p><p className="kicker">ネギ餅とは？</p>
             <h2>台湾で親しまれている<br />『蔥油餅（ツォンヨウビン）』</h2>
             <p><strong>ネギ餅（蔥油餅）のルーツは中国北部にあるとされています。</strong>その焼き上げ技法は新石器時代まで遡るとも言われ、山西省などの地域では、小麦粉を使った焼き餅が人々の食文化として発展しました。</p>
             <p>やがてネギと油を使った「蔥油餅」が広まり、北京などでは屋台で気軽に食べられるファストフードとして親しまれるようになりました。</p>
@@ -221,34 +261,6 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="history section-pad" aria-labelledby="history-title">
-        <div className="history__intro" data-reveal><p className="section-number">03 — ROOTS &amp; CULTURE</p><p className="kicker">おいしさの歴史</p><h2 id="history-title">朝ごはんから、<br />世界のカルチャーへ。</h2></div>
-        <div className="timeline">
-          <article data-reveal><span>毎日の味</span><h3>台湾の暮らしに根づくネギ餅</h3><p>身近な小麦と青ねぎを使ったネギ餅は、台湾で朝食や軽食として親しまれてきました。屋台の鉄板で焼ける音と香りも、ごちそうの一部です。</p></article>
-          <article data-reveal><span>1980s</span><h3>台中から生まれた新しいお茶時間</h3><p>冷たい泡沫紅茶の文化に、甘く煮た粉圓（タピオカパール）が出会い、1980年代の台湾で珍珠奶茶が広まりました。</p></article>
-          <article data-reveal><span>NOW</span><h3>世代も国境も越える台湾小吃</h3><p>片手で楽しめる粉ものとお茶は、台湾の気取らない食文化そのもの。今では世界中で、自由な具材や甘さに進化しています。</p></article>
-        </div>
-      </section>
-
-      <section className="menu-section section-pad" id="menu">
-        <div className="menu-heading" data-reveal>
-          <div><p className="section-number">04 — MENU</p><p className="kicker">二つの台湾のおいしさ</p><h2>ネギ餅、三つの味。<br />タピオカも一緒に。</h2></div>
-          <p>ネギ餅は醤油・ポン酢・チーズの3種類。<br />タピオカは350円でご用意しています。</p>
-        </div>
-        <div className="menu-product-grid">
-          <article className="menu-product-card menu-product-card--green" data-reveal>
-            <div className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>01</span></div>
-            <div className="menu-product-card__body"><p>蔥油餅 ・ SCALLION PANCAKE</p><h3>ネギ餅</h3><div><strong>¥400〜</strong><span>醤油味 400円 ／ ポン酢 400円 ／ チーズ 500円</span></div></div>
-          </article>
-          <article className="menu-product-card" data-reveal>
-            <div className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="タピオカ" /><span>02</span></div>
-            <div className="menu-product-card__body"><p>珍珠 ・ TAPIOCA</p><h3>タピオカ</h3><div><strong>¥350</strong><span>1杯 350円</span></div></div>
-          </article>
-        </div>
-        <div className="menu-coming-soon" data-reveal><span>MENU PRICE</span><p>ネギ餅：醤油味 400円 ／ ポン酢 400円 ／ チーズ 500円<br />タピオカ：350円</p></div>
-        <p className="menu-note">※写真はイメージです。メニュー内容は変更になる場合があります。</p>
-      </section>
-
       <section className="message section-pad">
         <div className="message__photo" data-reveal><img src="/scallion-pancake.jpg" alt="焼きたてのネギ餅" /><div className="message__monogram" aria-hidden="true">餅</div></div>
         <div className="message__copy" data-reveal><p className="section-number">05 — FROM OUR TEAM</p><p className="kicker">スタッフから</p><blockquote>「味と雰囲気の両方を、<br />大切に。」</blockquote>
@@ -265,8 +277,7 @@ export default function Home() {
             <div><dt><MapPin size={17} />場所</dt><dd>郁文館夢学園</dd></div>
             <div><dt><Clock3 size={17} />営業時間</dt><dd><strong>1日目</strong>　9:00 — 16:00<br /><strong>2日目</strong>　9:00 — 15:00</dd></div>
           </dl>
-          <div className="shop__links"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%83%81%E6%96%87%E9%A4%A8%E5%A4%A2%E5%AD%A6%E5%9C%92" target="_blank" rel="noreferrer">Google Map <ArrowRight size={17} /></a><a href="https://instagram.com" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></div>
-          <p className="placeholder-note">※SNSリンクは仮情報です。公開前に正式情報へ差し替えてください。</p>
+          <div className="shop__links"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%83%81%E6%96%87%E9%A4%A8%E5%A4%A2%E5%AD%A6%E5%9C%92" target="_blank" rel="noreferrer">Google Map <ArrowRight size={17} /></a></div>
         </div>
       </section>
 
