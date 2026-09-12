@@ -45,26 +45,13 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .brand { align-items: center; display: inline-flex; gap: 11px; width: max-content; }
-.brand__seal {
-  align-items: center;
-  background: var(--red);
-  border-radius: 50%;
-  color: #fff4dc;
-  display: flex;
-  font-family: "Yu Mincho", serif;
-  font-size: 22px;
-  font-weight: 800;
-  height: 46px;
-  justify-content: center;
-  outline: 1px solid rgba(255,255,255,.7);
-  outline-offset: -5px;
-  rotate: -6deg;
-  width: 46px;
-}
+.brand__logo { display: block; flex: 0 0 auto; height: 58px; overflow: hidden; width: 58px; }
+.brand__logo img { height: 100%; mix-blend-mode: multiply; object-fit: cover; transform: scale(1.08); width: 100%; }
 .brand__name { display: flex; flex-direction: column; line-height: 1; }
 .brand__name strong { font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-size: 21px; letter-spacing: .08em; }
 .brand__name small { font-size: 8px; font-weight: 750; letter-spacing: .11em; margin-top: 6px; }
 .brand--light { color: var(--paper); }
+.brand--light .brand__logo img { filter: invert(1); mix-blend-mode: screen; }
 
 .desktop-nav { display: flex; gap: clamp(22px, 3vw, 46px); justify-content: center; }
 .desktop-nav a { font-size: 13px; font-weight: 700; position: relative; }
@@ -419,7 +406,7 @@ footer > small { color: rgba(255,255,255,.35); font-size: 9px; grid-column: 1 / 
 @media (max-width: 640px) {
   body { font-size: 15px; }
   .site-header { height: 76px; padding: 0 18px; }
-  .brand__seal { font-size: 19px; height: 40px; width: 40px; }
+  .brand__logo { height: 46px; width: 46px; }
   .brand__name strong { font-size: 18px; }
   .brand__name small { font-size: 7px; }
   .hero { padding-top: 76px; }

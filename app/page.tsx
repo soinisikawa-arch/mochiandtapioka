@@ -14,7 +14,7 @@ import {
 function BrandMark({ light = false }: { light?: boolean }) {
   return (
     <a className={`brand ${light ? 'brand--light' : ''}`} href="#top" aria-label="もちっとこいよ トップへ">
-      <span className="brand__seal" aria-hidden="true">餅</span>
+      <span className="brand__logo" aria-hidden="true"><img src="/mochitto-logo.jpg" alt="" /></span>
       <span className="brand__name">
         <strong>もちっとこいよ</strong>
         <small>MOCHITTO KOIYO</small>
