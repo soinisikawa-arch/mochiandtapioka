@@ -198,7 +198,7 @@ export default function Home() {
         <div className="history__intro" data-reveal><p className="section-number">02 — ROOTS &amp; CULTURE</p><p className="kicker">おいしさの歴史</p><h2 id="history-title">朝ごはんから、<br />世界のカルチャーへ。</h2></div>
         <div className="timeline">
           <article data-reveal><span>毎日の味</span><h3>台湾の暮らしに根づくネギ餅</h3><p>身近な小麦と青ねぎを使ったネギ餅は、台湾で朝食や軽食として親しまれてきました。屋台の鉄板で焼ける音と香りも、ごちそうの一部です。</p></article>
-          <article data-reveal><span>1980s</span><h3>台中から生まれた新しいお茶時間</h3><p>冷たい泡沫紅茶の文化に、甘く煮た粉圓（タピオカパール）が出会い、1980年代の台湾で珍珠奶茶が広まりました。</p></article>
+          <article data-reveal><span>1980s</span><h3>台湾から生まれた新しいお茶時間</h3><p>冷たい泡沫紅茶の文化に、甘く煮た粉圓（タピオカパール）が出会い、1980年代の台湾で珍珠奶茶が広まりました。</p></article>
           <article data-reveal><span>NOW</span><h3>世代も国境も越える台湾小吃</h3><p>片手で楽しめる粉ものとお茶は、台湾の気取らない食文化そのもの。今では世界中で、自由な具材や甘さに進化しています。</p></article>
         </div>
       </section>
