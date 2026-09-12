@@ -200,16 +200,22 @@ export default function Home() {
           <div className="product-panel__image" data-reveal><img src="/scallion-pancake.jpg" alt="層になった生地と青ねぎが見えるネギ餅" /><span className="photo-label">蔥油餅 ・ CONG YOU BING</span></div>
           <div className="product-panel__copy" data-reveal>
             <p className="section-number">02 — OUR SPECIALTY</p><p className="kicker">ネギ餅とは？</p>
-            <h2>外はパリッ。<br />中は、もっちり。</h2>
-            <p>小麦の生地に青ねぎと油を重ね、薄い層をつくって香ばしく焼く台湾の粉もの。ひと口目はサクッ、そのあとにむっちりした生地とねぎの甘い香りが広がります。</p>
+            <h2>台湾で親しまれている<br />『蔥油餅（ツォンヨウビン）』</h2>
+            <p><strong>ネギ餅（蔥油餅）のルーツは中国北部にあるとされています。</strong>その焼き上げ技法は新石器時代まで遡るとも言われ、山西省などの地域では、小麦粉を使った焼き餅が人々の食文化として発展しました。</p>
+            <p>やがてネギと油を使った「蔥油餅」が広まり、北京などでは屋台で気軽に食べられるファストフードとして親しまれるようになりました。</p>
+            <p>現在では台湾の夜市などでも人気の料理となっています。また、<strong>マルコ・ポーロが中国で食べた葱油餅をもとにピザが生まれた</strong>という俗説もあります。</p>
+            <p>中国北部から台湾へ――。<br />長い歴史の中で親しまれてきたネギ餅を、ぜひお楽しみください。</p>
             <div className="taste-notes"><span>香ばしい</span><span>層の食感</span><span>ねぎの甘み</span></div>
           </div>
         </article>
         <article className="product-panel product-panel--tea">
           <div className="product-panel__image" data-reveal><img src="/brown-sugar-bubble-tea.jpg" alt="氷の入ったタピオカミルクティー" /><span className="photo-label">珍珠奶茶 ・ ZHEN ZHU NAI CHA</span></div>
           <div className="product-panel__copy" data-reveal>
-            <p className="kicker">タピオカとは？</p><h2>お茶を味わい、<br />パールを噛む。</h2>
-            <p>キャッサバのでんぷんから生まれる、つるんと弾む黒いパール。丁寧に仕込んだタピオカを、香り高い台湾茶やミルクと合わせます。飲むだけではない、楽しい食感のデザートドリンクです。</p>
+            <p className="kicker">タピオカとは？</p><h2>キャッサバから、<br />世界の一杯へ。</h2>
+            <p>かつて南米の熱帯雨林で、先住民たちが一本の木を大切に育てていました。その根に実るイモ「<strong>キャッサバ</strong>」こそが、すべての始まりです。彼らはこのイモから白いデンプンを取り出す技術を、敬意を込めて「<strong>ティピオカ</strong>」と呼びました。</p>
+            <p>大航海時代、この白い粉はポルトガル人の船に乗り、海を渡ってアジアの熱帯地域へと広がっていきます。しかし、まだこの時は誰も、それが未来の主役になるとは気づいていませんでした。</p>
+            <p>それから数百年が経った1980年代。舞台は活気あふれる台湾へと移ります。ある日、喫茶店「<strong>春水堂</strong>」の主人が、お茶をもっと楽しく、新しく楽しめないかと考えていました。そこでふと思いついたのが、伝統的なスイーツだったモチモチのタピオカを、冷たいミルクティーに沈めてみることでした。</p>
+            <p>ストローを伝って口に飛び込む、お茶の香りと不思議な食感。この偶然のようなひらめきが、またたく間に世界を虜にする「タピオカミルクティー」という奇跡のドリンクを生み出したのです。</p>
             <div className="taste-notes"><span>もちもち</span><span>コク深い</span><span>台湾茶の香り</span></div>
           </div>
         </article>
@@ -230,16 +236,16 @@ export default function Home() {
           <p>ネギ餅は醤油・ポン酢・チーズの3種類。<br />タピオカは350円でご用意しています。</p>
         </div>
         <div className="menu-product-grid">
+          <article className="menu-product-card menu-product-card--green" data-reveal>
+            <div className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>01</span></div>
+            <div className="menu-product-card__body"><p>蔥油餅 ・ SCALLION PANCAKE</p><h3>ネギ餅</h3><div><strong>¥400〜</strong><span>醤油味 400円 ／ ポン酢 400円 ／ チーズ 500円</span></div></div>
+          </article>
           <article className="menu-product-card" data-reveal>
-            <div className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="タピオカ" /><span>01</span></div>
+            <div className="menu-product-card__image"><img src="/brown-sugar-bubble-tea.jpg" alt="タピオカ" /><span>02</span></div>
             <div className="menu-product-card__body"><p>珍珠 ・ TAPIOCA</p><h3>タピオカ</h3><div><strong>¥350</strong><span>1杯 350円</span></div></div>
           </article>
-          <article className="menu-product-card menu-product-card--green" data-reveal>
-            <div className="menu-product-card__image"><img src="/scallion-pancake.jpg" alt="香ばしく焼き上げたネギ餅" /><span>02</span></div>
-            <div className="menu-product-card__body"><p>蔥油餅 ・ SCALLION PANCAKE</p><h3>ネギ餅</h3><div><strong>¥400〜</strong><span>醤油 400円 ／ ポン酢 400円 ／ チーズ 500円</span></div></div>
-          </article>
         </div>
-        <div className="menu-coming-soon" data-reveal><span>MENU PRICE</span><p>ネギ餅：醤油 400円 ／ ポン酢 400円 ／ チーズ 500円<br />タピオカ：350円</p></div>
+        <div className="menu-coming-soon" data-reveal><span>MENU PRICE</span><p>ネギ餅：醤油味 400円 ／ ポン酢 400円 ／ チーズ 500円<br />タピオカ：350円</p></div>
         <p className="menu-note">※写真はイメージです。メニュー内容は変更になる場合があります。</p>
       </section>
 
