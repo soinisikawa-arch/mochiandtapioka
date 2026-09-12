@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import {
   ArrowDown,
   ArrowRight,
@@ -24,6 +24,26 @@ function BrandMark({ light = false }: { light?: boolean }) {
 }
 
 export default function Home() {
+  useLayoutEffect(() => {
+    const previousScrollRestoration = window.history.scrollRestoration;
+    const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
+    window.history.scrollRestoration = 'manual';
+    if (window.location.hash) {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+
+    scrollToTop();
+    const animationFrame = window.requestAnimationFrame(scrollToTop);
+    window.addEventListener('pageshow', scrollToTop);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('pageshow', scrollToTop);
+      window.history.scrollRestoration = previousScrollRestoration;
+    };
+  }, []);
+
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>('[data-reveal]');
     const observer = new IntersectionObserver(
