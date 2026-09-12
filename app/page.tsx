@@ -215,8 +215,8 @@ export default function Home() {
               <p>SCALLION PANCAKE</p><h3>ネギ餅</h3>
               <p className="menu-product-card__lead">焼きたての香ばしさと、重なった生地のもちもち食感。</p>
               <ul className="menu-price-list" aria-label="ネギ餅の味と価格">
-                <li><span>醤油味</span><strong>400<small>円</small></strong></li>
-                <li><span>ポン酢</span><strong>400<small>円</small></strong></li>
+                <li><span>醤油味</span><strong>450<small>円</small></strong></li>
+                <li><span>ポン酢</span><strong>450<small>円</small></strong></li>
                 <li><span>チーズ</span><strong>500<small>円</small></strong></li>
               </ul>
             </div>
