@@ -106,29 +106,6 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .hero__pancake img { object-position: 46% 45%; }
 .hero__tea { bottom: 0; box-shadow: -20px -20px 0 var(--yellow); height: 60%; right: 4.5%; width: 38%; z-index: 2; }
 .hero__tea img { object-position: 51% 50%; }
-.hero__stamp {
-  align-items: center;
-  animation: float 4s ease-in-out infinite;
-  background: var(--red);
-  border: 2px solid var(--paper);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 138px;
-  justify-content: center;
-  left: 4%;
-  line-height: 1.2;
-  outline: 1px solid var(--red);
-  outline-offset: 4px;
-  position: absolute;
-  top: 56%;
-  transform: rotate(-9deg);
-  width: 138px;
-  z-index: 6;
-}
-.hero__stamp strong { font-family: "Yu Mincho", serif; font-size: 36px; margin: 5px 0; }
-.hero__stamp span { font-size: 10px; font-weight: 800; letter-spacing: .14em; }
 .hero__vertical { color: rgba(255,255,255,.8); font-family: "Yu Mincho", serif; letter-spacing: .25em; margin: 0; position: absolute; right: 13px; top: 80px; writing-mode: vertical-rl; z-index: 6; }
 .scroll-cue { align-items: center; bottom: 28px; display: flex; flex-direction: column; font-size: 9px; font-weight: 800; gap: 8px; left: 32px; letter-spacing: .2em; position: absolute; z-index: 7; }
 
@@ -379,7 +356,6 @@ footer > small { color: rgba(255,255,255,.35); font-size: 9px; grid-column: 1 / 
 [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
 .timeline article:nth-child(2), .menu-product-card:nth-child(2) { transition-delay: .12s; }
 .timeline article:nth-child(3) { transition-delay: .24s; }
-@keyframes float { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 @media (max-width: 980px) {
@@ -418,8 +394,6 @@ footer > small { color: rgba(255,255,255,.35); font-size: 9px; grid-column: 1 / 
   .hero__visual::after { inset: 18px; }
   .hero__pancake { height: 54%; left: 6%; top: 6%; width: 83%; }
   .hero__tea { height: 57%; right: 5%; width: 46%; }
-  .hero__stamp { height: 102px; left: 7%; top: 54%; width: 102px; }
-  .hero__stamp strong { font-size: 28px; }
   .hero__vertical { right: 2px; top: 55px; }
   .ticker span { font-size: 15px; }
   .scroll-cinema { height: 280svh; }

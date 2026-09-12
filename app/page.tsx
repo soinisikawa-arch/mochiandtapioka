@@ -155,7 +155,6 @@ export default function Home() {
         <div className="hero__visual" aria-label="焼きたてネギ餅とタピオカミルクティー">
           <figure className="hero__pancake image-wrap"><img src="/scallion-pancake.jpg" alt="香ばしく焼けたネギ餅" /></figure>
           <figure className="hero__tea image-wrap"><img src="/brown-sugar-bubble-tea.jpg" alt="もちもちのタピオカミルクティー" /></figure>
-          <div className="hero__stamp" aria-hidden="true"><span>毎日手づくり</span><strong>現做</strong><span>焼きたて</span></div>
           <p className="hero__vertical" aria-hidden="true">台灣小吃・幸福時間</p>
         </div>
         <a className="scroll-cue" href="#motion" aria-label="タピオカミルクティーのモーションへ"><span>SCROLL</span><ArrowDown size={17} /></a>
